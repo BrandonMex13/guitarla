@@ -1,4 +1,11 @@
-function Guitar({guitar, addToCart}) {
+import { Guitar as GuitarT } from "../types/index";
+
+type GuitarProps = {
+    guitar : GuitarT,
+    addToCart : (item : GuitarT) => void
+}
+
+function Guitar({guitar, addToCart} : GuitarProps) {
 
     const { id, name, image, description, price } = guitar;
 
